@@ -7,7 +7,8 @@ int main(int argc, char *argv[]) {
     printf("\n0x4e = %d", htoi("0x4e"));
     printf("\n0X01B = %d", htoi("0X01B"));
     printf("\n1B = %d", htoi("1B"));
-    printf("\n01B = %d", htoi("01b"));
+    printf("\n01b = %d", htoi("01b"));
+    printf("\n01X = %d", htoi("01X"));
 
     return 0;
 }
@@ -79,7 +80,8 @@ int htoi(char s[])
                 break;
             case 'x':
             case 'X':
-                break;
+                if(j == 1)
+                    break;
             default:
                 return -1;
         }
